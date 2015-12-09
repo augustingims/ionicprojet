@@ -1,0 +1,23 @@
+<ion-view view-title="">
+  <ion-content>
+    <div class="bar bar-subheader bar-stable static text-center">
+      <strong class="title">Comments of this computer</strong>
+    </div>
+  <div class="content">
+   <div class="card animate-rip" side="right" ng-repeat="com in commentaires">
+    <div class="item item-avatar item-text-wrap dark-bg waves-effect waves-block waves-dark">
+      <span class="avatar" style="background-image: url('../img/comments.png');"></span>
+      <strong>Mr. {{com.pseudo}}</strong>
+      <p>{{com.message}}</p>
+      <div class="card-footer text-right">
+        <i class="icon ion-chatboxes positive"></i> 6
+        <i class="icon ion-heart assertive"></i> 23
+        <div class="pull-left">
+          <i class="icon ion-clock"></i>{{com.date | date:'HH:mm'}}
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</ion-content>
+</ion-view>

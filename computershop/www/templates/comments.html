@@ -1,0 +1,21 @@
+<ion-view view-title="Comments">
+  <ion-content>
+    <div class="bar bar-subheader bar-stable static text-center">
+      <strong class="title">All Activity about the computer</strong>
+    </div>
+    <div class="content">
+      <div class="card animate-rip" ng-repeat="com in commentaire">
+        <div class="item item-avatar item-text-wrap dark-bg waves-effect waves-block waves-dark">
+          <img data-ng-src="http://127.0.0.1:8080/api/ordinateur/getImg/{{com.image}}">
+          <strong>Mr. {{com.pseudo}}</strong>
+          <p>{{com.message}}</p>
+          <div class="card-footer text-right">
+            <div class="pull-left">
+              <i class="icon ion-clock"></i>{{com.date | date:'HH:mm'}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

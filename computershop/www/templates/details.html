@@ -1,0 +1,32 @@
+<ion-view view-title="Details">
+  <ion-content>
+    <div class="hero has-mask ">
+      <img data-ng-src="{{'data:image/*;base64,' + ordinateur.image}}"  ng-if="ordinateur.image" style="width: 100%; height: 100%;">
+      <div class="content">
+        <a href="#/app/comment/{{ordinateur.id}}" class="button button-large button-clear flat  icon ion-chatbox pull-right"><span class="badge badge-assertive">{{nbrecomment}}</span></a>
+        <button ng-click="photo()" class="button button-large button-clear flat icon ion-images pull-right "></button>
+      </div>
+    </div>
+    <div class="mid-bar dark-bg z1 padding">
+      <h3>{{ordinateur.name}}</h3>
+      <p>{{ordinateur.prix}} FCFA
+      <a href="#/app/commenter/{{ordinateur.id}}" class="button-large ion ion-chatboxes pull-right">
+        Commenter
+      </a>
+      </p>
+    </div>
+    <div class="content double-padding animate-ripple">
+      <h4 class="positive">Description</h4>
+      <p class="text-muted">
+        <strong>{{ordinateur.name}}</strong> est un <strong>{{ordinateur.type}}</strong> performance doté d'un proccesseur de <strong>{{ordinateur.cpu}}</strong>,
+        d'une memoire (RAM) de  <strong>{{ordinateur.ram}}</strong>, d'un disque dur de <strong>{{ordinateur.dd}}</strong> de capacité,
+        et pour finir une carte graphique de <strong>{{ordinateur.cartegraphique}}</strong>.
+      </p>
+      <h4 class="positive">Autres Caracteristiques</h4>
+      <p class="text-muted">
+        En plus de cela cet appariel possède un lecteur <strong>{{ordinateur.lecteur}}</strong>, une <strong>{{ordinateur.webcam}}</strong>
+        , un<strong> {{ordinateur.wifi}}</strong>, un graveur<strong> {{ordinateur.graveur}}</strong>, un ecran de <strong>{{ordinateur.tailleecran}} </strong> et en fin le <strong>{{ordinateur.bluetooth}}</strong>
+      </p>
+    </div>
+  </ion-content>
+</ion-view>

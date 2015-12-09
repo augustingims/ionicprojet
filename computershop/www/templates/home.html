@@ -1,0 +1,25 @@
+<ion-view view-title="E-Computer" ng-cont class="pane" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);">
+  <ion-content class="scroll-content ionic-scroll has-header logoImage" ng-class="{expanded:$scope.isExpanded}">
+    <div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+      <div class="hero" style="background-image: url('../img/logo.jpg');">
+        <div class="content">
+
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+    <div class="row" ng-repeat="ordi in ordinateurs" ng-if="$index % 2 == 0">
+      <div class="col card balanced-bg" ng-show="ordinateurs[$index]">
+        <a class="item clear-bg item-bg-image item-bg-image" href="#/app/ordinateur/{{ordinateurs[$index].id}}">
+          <img  data-ng-src="http://127.0.0.1:8080/api/ordinateur/getImg/{{ordinateurs[$index].id}}" style="width: 100%; height: 100%;">
+        </a>
+      </div>
+      <div class="col card balanced-bg" ng-show="ordinateurs[$index+1]">
+        <a class="item clear-bg item-bg-image item-bg-image" href="#/app/ordinateur/{{ordinateurs[$index+1].id}}">
+          <img data-ng-src="http://127.0.0.1:8080/api/ordinateur/getImg/{{ordinateurs[$index+1].id}}" style="width: 100%; height: 100%;">
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

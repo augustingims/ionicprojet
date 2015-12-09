@@ -1,0 +1,39 @@
+<ion-view title="Commenter">
+  <ion-pane  style = "background-color:#4992E2;">
+    <ion-header-bar class="bar bar-subheader" style = " margin-top: 0px; background-color:#F9F9F9;">
+      <h1 class="title" style = "color:black;">Vous etes libre de vous exprimer</h1>
+    </ion-header-bar>
+    <ion-content >
+      <div class="item-input-inset">
+        <h4>Pseudo:</h4>
+        <label class="item-input-wrapper">
+          <input ng-model="commentaire.pseudo" type="text" placeholder="Pseudo">
+        </label>
+      </div>
+      <div class="item-input-inset">
+        <h4>E-mail:&nbsp;</h4>
+        <label class="item-input-wrapper">
+          <input ng-model="commentaire.email" type="email" placeholder="email">
+        </label>
+      </div>
+      <div class="item-input-inset">
+        <h4>Phone:&nbsp;</h4>
+        <label class="item-input-wrapper">
+          <input ng-model="commentaire.phone" type="tel" placeholder="phone">
+        </label>
+      </div>
+     <h4> &nbsp;&nbsp;Message</h4>
+      <div class="item-input-inset">
+        <label class="item-input-wrapper">
+        <textarea ng-model="commentaire.message" placeholder="message" rows="8" cols="31">
+        </textarea>
+        </label>
+      </div>
+      <div class="row">
+      <button class="button button-small icon-left ion-chatbox  button-calm" ng-click="commenter()">
+        Commenter
+      </button>
+      </div>
+    </ion-content>
+  </ion-pane>
+</ion-view>

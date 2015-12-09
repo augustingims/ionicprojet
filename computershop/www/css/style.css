@@ -1,0 +1,39 @@
+.expanded {
+  background-image: url('../img/backlogo.png');
+  background-size: 120%;
+  background-position: 0%;
+  transition: all .5s ease-in-out;
+}
+
+.menu.menu-left * {
+  font-weight: bold;
+}
+.expanded {
+  transition: all .5s ease-in-out;
+}
+
+.expanded {
+  background-color: #222;
+}
+
+.menu-open .ion-navicon {
+  transform: rotate(-360deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+  content: "\f2ca";
+}
+
+.app-icon {
+  background-color: #fff;
+  background: url('../img/ionic.png') center;
+  background-size: cover;
+  border-radius: 50%;
+  height: 125px;
+  margin: 0 auto;
+  width: 125px;
+}
+
+
